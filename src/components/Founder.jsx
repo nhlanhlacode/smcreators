@@ -1,16 +1,30 @@
+import { useState } from 'react'
 import Reveal from './Reveal.jsx'
 
 export default function Founder() {
+  const [imgFailed, setImgFailed] = useState(false)
+
   return (
     <section id="about" className="relative overflow-hidden bg-cream py-24 md:py-28">
       <div className="container-page grid grid-cols-1 items-center gap-14 lg:grid-cols-[0.85fr_1.15fr]">
         <Reveal direction="right">
           <div className="relative mx-auto aspect-square w-full max-w-xs overflow-hidden rounded-full border border-taupe-900/10 bg-taupe-700 shadow-[0_30px_60px_-24px_rgba(0,0,0,0.35)] lg:max-w-sm">
-            <img 
-              src="sphesihle.png" 
-              alt="Sphesihle Mchunu - Founder" 
-              className="h-full w-full object-cover"
-            />
+            {!imgFailed ? (
+              <img
+                src="/sphesihle.jpg"
+                alt="Sphesihle Mchunu, founder of SM Creator Studio"
+                loading="lazy"
+                decoding="async"
+                onError={() => setImgFailed(true)}
+                className="h-full w-full object-cover object-[center_30%]"
+              />
+            ) : (
+              <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-taupe-600 to-taupe-800">
+                <span className="font-serif text-6xl italic font-semibold text-white/90">
+                  SM
+                </span>
+              </div>
+            )}
           </div>
         </Reveal>
 
