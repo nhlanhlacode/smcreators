@@ -6,11 +6,11 @@ export default function Founder() {
       <div className="container-page grid grid-cols-1 items-center gap-14 lg:grid-cols-[0.85fr_1.15fr]">
         <Reveal direction="right">
           <div className="relative mx-auto aspect-square w-full max-w-xs overflow-hidden rounded-full border border-taupe-900/10 bg-taupe-700 shadow-[0_30px_60px_-24px_rgba(0,0,0,0.35)] lg:max-w-sm">
-            <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-taupe-600 to-taupe-800">
-              <span className="font-serif text-6xl italic font-semibold text-white/90">
-                SM
-              </span>
-            </div>
+            <img 
+              src="/sphesihle.jpg" 
+              alt="Sphesihle Mchunu - Founder" 
+              className="h-full w-full object-cover"
+            />
           </div>
         </Reveal>
 
@@ -38,7 +38,7 @@ export default function Founder() {
             href="https://instagram.com/sphesihle.mchunu"
             target="_blank"
             rel="noreferrer noopener"
-            className="mt-8 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest2 text-taupe-900 underline decoration-brass underline-offset-4 transition-colors hover:text-brass"
+            className="mt-8 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest2 text-taupe-900 underline decoration-brass underline-offset-4 transition-colors hover:text-taupe-700"
           >
             @sphesihle.mchunu on Instagram
           </a>
