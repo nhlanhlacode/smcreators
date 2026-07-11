@@ -7,7 +7,7 @@ export default function Founder() {
         <Reveal direction="right">
           <div className="relative mx-auto aspect-square w-full max-w-xs overflow-hidden rounded-full border border-taupe-900/10 bg-taupe-700 shadow-[0_30px_60px_-24px_rgba(0,0,0,0.35)] lg:max-w-sm">
             <img 
-              src="/sphesihle.jpg" 
+              src="sphesihle.png" 
               alt="Sphesihle Mchunu - Founder" 
               className="h-full w-full object-cover"
             />
