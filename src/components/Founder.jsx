@@ -44,6 +44,29 @@ function YouTubeIcon(props) {
   )
 }
 
+const SOCIAL_LINKS = [
+  {
+    label: '@sphesihle.mchunu on Instagram',
+    href: 'https://instagram.com/sphesihle.mchunu',
+    Icon: InstagramIcon,
+  },
+  {
+    label: 'TikTok',
+    href: 'https://www.tiktok.com/@shemakescontent_sa?is_from_webapp=1&sender_device=pc',
+    Icon: TikTokIcon,
+  },
+  {
+    label: 'Facebook',
+    href: 'https://www.facebook.com/sphesihle.mchunu.50309/about',
+    Icon: FacebookIcon,
+  },
+  {
+    label: 'YouTube',
+    href: 'https://www.youtube.com/@sphesihle.mchunu',
+    Icon: YouTubeIcon,
+  },
+]
+
 export default function Founder() {
   const [imgFailed, setImgFailed] = useState(false)
 
@@ -91,47 +114,21 @@ export default function Founder() {
             ground up — not theory borrowed from a marketing textbook.
           </p>
 
-          <div className="mt-8 flex flex-col gap-3">
-            <a
-              href="https://instagram.com/sphesihle.mchunu"
-              target="_blank"
-              rel="noreferrer noopener"
-              className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest2 text-taupe-900 underline decoration-brass underline-offset-4 transition-colors hover:text-taupe-700"
-            >
-              @sphesihle.mchunu on Instagram
-            </a>
-
-            <div className="flex items-center gap-4">
+          <div className="mt-8 flex flex-col items-start gap-3">
+            {SOCIAL_LINKS.map(({ label, href, Icon }) => (
               <a
-                href="https://www.tiktok.com/@shemakescontent_sa?is_from_webapp=1&sender_device=pc"
+                key={label}
+                href={href}
                 target="_blank"
                 rel="noreferrer noopener"
-                className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest2 text-taupe-900 underline decoration-brass underline-offset-4 transition-colors hover:text-taupe-700"
+                className="inline-flex items-center gap-2.5 text-sm font-semibold uppercase tracking-widest2 text-taupe-900 transition-colors hover:text-taupe-700"
               >
-                <TikTokIcon className="h-4 w-4" />
-                TikTok
+                <Icon className="h-4 w-4 shrink-0" />
+                <span className="underline decoration-brass underline-offset-4">
+                  {label}
+                </span>
               </a>
-
-              <a
-                href="https://www.facebook.com/sphesihle.mchunu.50309/about"
-                target="_blank"
-                rel="noreferrer noopener"
-                className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest2 text-taupe-900 underline decoration-brass underline-offset-4 transition-colors hover:text-taupe-700"
-              >
-                <FacebookIcon className="h-4 w-4" />
-                Facebook
-              </a>
-
-              <a
-                href="https://www.youtube.com/@sphesihle.mchunu"
-                target="_blank"
-                rel="noreferrer noopener"
-                className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-widest2 text-taupe-900 underline decoration-brass underline-offset-4 transition-colors hover:text-taupe-700"
-              >
-                <YouTubeIcon className="h-4 w-4" />
-                YouTube
-              </a>
-            </div>
+            ))}
           </div>
         </Reveal>
       </div>
